@@ -1,7 +1,7 @@
-%Nombres y secciÛn
+%Nombres y secci√≥n
 %Guillermo Javier Morales Cornejo Sec 02
-%Alejandro DonalÌ Hern·ndez Ramos Sec 02
-%Fernando Daniel Gonz·lez Batarse Sec 02
+%Alejandro Donal√≠ Hern√°ndez Ramos Sec 02
+%Fernando Daniel Gonz√°lez Batarse Sec 02
 
 %Ejercicio 2. El enemigo de mi enemigo es mi amigo
 
@@ -27,9 +27,7 @@ aliado(X,Y,Z):-
     enemigo(Y,Z),
     \==(Z,X). %se comprueba si son distintos
 
-aliado(_,_,_):-
-
-    !.
+aliado(_,_,_):- !.
 
 
 
