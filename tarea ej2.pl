@@ -1,7 +1,7 @@
 %Nombres y sección
 %Guillermo Javier Morales Cornejo Sec 02
 %Alejandro Donalí Hernández Ramos Sec 02
-%Fernando Daniel González Batarse Sec 02
+%Fernando Daniel González Batarsé Sec 02
 
 %Ejercicio 2. El enemigo de mi enemigo es mi amigo
 
