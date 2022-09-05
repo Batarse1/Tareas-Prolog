@@ -1,0 +1,62 @@
+% Nombres y sección
+% Guillermo Javier Morales Cornejo Sec 02
+% Alejandro Donalí Hernández Ramos Sec 02
+% Fernando Daniel González Batarsé Sec 02
+
+% Ejercicio 1. Pepito se escapó del colegio y se fue con sus amigos
+% al centro comercial.
+
+% Locales
+local(foodcourt).
+local(zapateria).
+local(lee_Shoes).
+local(gradas_electricas).
+local(super_selectos).
+local(ferreteria).
+local(freund).
+local(cinepolis).
+local(la_neveria).
+local(torogoz).
+local(dollar_city).
+
+% Verificar si el primer argumento existe
+locales_posibles(X,_,_):-
+    not(local(X)),
+    writeln("El primer argumento debe de ser un local existente"),!,fail.
+
+% Verificar si el segundo argumento existe
+locales_posibles(_,Y,_):-
+    not(local(Y)),
+    writeln("El segundo argumento debe de ser un local existente"),!,fail.
+
+% Locales posibles a los que pepito puede ir sin ser visto por sus papas
+locales_posibles(X,Y,Z):-
+    local(Z),
+    \==(X, Z),
+    \==(Y, Z).
+
+% Ejercicio 2. El enemigo de mi enemigo es mi amigo
+
+% Definiendo enemigos
+enemigo(david, juan).
+enemigo(juan,david).
+enemigo(roberto, miguel).
+enemigo(miguel , roberto).
+enemigo(alan, josue).
+enemigo(josue , alan).
+enemigo(alan, david).
+enemigo(david, alan).
+enemigo(alan, juan).
+enemigo(juan, alan).
+enemigo(juan, francisco).
+enemigo(francisco, juan).
+
+% definiendo aliado/3
+aliado(X,Y,Z):-
+    enemigo(X,Y), %X es enemigo de Y
+    enemigo(Y,X), %Y es enemigo de X
+    enemigo(Z,Y), %Z es enegmigo de Y
+    enemigo(Y,Z),
+    \==(Z,X). %se comprueba si son distintos
+
+aliado(_,_,_):- !.
