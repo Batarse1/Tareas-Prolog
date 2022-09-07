@@ -60,3 +60,19 @@ aliado(X,Y,Z):-
     \==(Z,X). %se comprueba si son distintos
 
 aliado(_,_,_):- !.
+
+% Ejercicio 3. Suma de digitos dado un entero
+
+sumardigitos(N,N):-
+    N<10. %Verifico cuantos digitos hay 
+
+sumardigitos(N,X):-
+    N>9,
+    X1 is N mod 10, %Tomo lo último
+    N1 is N//10, %Tomo lo primero
+    sumardigitos(N1, Y), %mando a comprobar hasta que sea 1 digito
+    X is X1 + Y, %empiezo a sumar digitos
+    !.
+
+
+
